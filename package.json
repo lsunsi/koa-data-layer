@@ -1,21 +1,29 @@
 {
-  "name": "koa-data-layer",
-  "version": "0.0.1",
-  "description": "",
+  "name": "koa-graphdl-middleware",
+  "version": "0.1.0",
+  "description": "Exposes graph-data-layer from your koa server",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "mkdir build; babel ./src -d build",
+    "lint": "eslint ./src --ext .js --ext .jsx; exit 0",
+    "clean": "rm -rf build/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lsunsi/koa-data-layer.git"
+    "url": "git+https://github.com/lsunsi/koa-graphdl-middleware.git"
   },
+  "keywords": [
+    "graph-dl",
+    "graph-data-layer",
+    "koa",
+    "middleware"
+  ],
   "author": "Lucas Sunsi",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lsunsi/koa-data-layer/issues"
+    "url": "https://github.com/lsunsi/koa-graphdl-middleware/issues"
   },
-  "homepage": "https://github.com/lsunsi/koa-data-layer#readme",
+  "homepage": "https://github.com/lsunsi/koa-graphdl-middleware#readme",
   "devDependencies": {
     "babel-cli": "^6.6.5",
     "babel-eslint": "^5.0.0",
@@ -24,5 +32,9 @@
     "eslint": "^2.4.0",
     "eslint-config-airbnb": "^6.1.0",
     "eslint-plugin-react": "^4.2.3"
+  },
+  "dependencies": {
+    "co-body": "^4.0.0",
+    "graph-data-layer": "^0.1.0"
   }
 }
